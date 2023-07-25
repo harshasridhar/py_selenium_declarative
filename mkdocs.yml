@@ -6,6 +6,7 @@ nav:
     - Usage: usage.md
     - Suite: suite.md
     - Operation: operation.md
+    - Examples: example.md
 
 theme:
   name: material

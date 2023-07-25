@@ -1,4 +1,4 @@
 # Installation
 ```shell
-pip install py_selenium_declarative-0.1.0-py3-none-any.whl
+pip install https://github.com/harshasridhar/py_selenium_declarative/archive/refs/tags/0.1.0.zip
 ```
