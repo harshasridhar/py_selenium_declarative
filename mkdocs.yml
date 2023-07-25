@@ -1,0 +1,11 @@
+site_name: PySeleniumDecalarative
+site_url: https://example.com/
+nav:
+    - Home: index.md
+    - Installation: installation.md
+    - Usage: usage.md
+    - Suite: suite.md
+    - Operation: operation.md
+
+theme:
+  name: material

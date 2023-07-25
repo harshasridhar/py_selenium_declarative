@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "py-selenium-declarative"
+version = "0.1.0"
+description = ""
+authors = ["Harsha Sridhar <sridharsha598@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "py_selenium_declarative" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+selenium = "^4.10.0"
+typer = "^0.9.0"
+mkdocs = "^1.4.3"
+mkdocs-material = "^9.1.19"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

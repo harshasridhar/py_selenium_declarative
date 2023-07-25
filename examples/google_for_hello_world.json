@@ -1,0 +1,17 @@
+{
+  "operations": [
+    {
+      "action": "get",
+      "value": "https://www.google.com"
+    },
+    {
+      "xpath": "//*[@id='APjFqb']",
+      "value": "Hello World",
+      "action": "text"
+    },
+    {
+      "action": "sleep",
+      "value": "10"
+    }
+  ]
+}
