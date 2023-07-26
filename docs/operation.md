@@ -2,11 +2,16 @@
 An operation is a entity that does a single unit of a task. The task type is defined by <b>action</b>.
 An operation is defined by the following fields:
 
+- [Name](./operation.md#name)
 - [XPath](./operation.md#xpath)
 - [Value](./operation.md#value)
 - [Action](./operation.md#action)
 - [IsInIFrame](./operation.md#isiniframe)
 - [IFrameSelector](./operation.md#iframeselector)
+
+## Name
+Field Name: `name`<br/>
+This field is used to specify the operation name.
 
 ## XPath
 Field Name: `xpath`<br/>
@@ -25,6 +30,7 @@ Action can be of type:
 - select: Wait for the element to be visible and then select a value specified in the field `value`.
 - text: Wait for the element to be visible, then set the value to the specified contents in the field `value` 
 and then click enter.
+- screenshot: Takes a screenshot of the current screen. (Filename is `screenshot_{operation_name}.png` if operation_name is not present the epoch is added)
 - sleep: Sleep for specified(via `value`) amount of seconds
 
 

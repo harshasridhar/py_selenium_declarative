@@ -38,6 +38,9 @@ class Runner:
             self.logger.info("Started at %s", time())
             sleep(int(operation.value))
             self.logger.info("Ended at %s", time())
+        elif operation.action == 'screenshot':
+            filename = f'screenshot_{operation.name if operation.name != "" else int(time())}.png'
+            self.driver.save_screenshot(filename)
 
     def __wait_until_element_is_visible__(self, xpath):
         WebDriverWait(self.driver, 15).until(expected_conditions.visibility_of_element_located((By.XPATH, xpath)))

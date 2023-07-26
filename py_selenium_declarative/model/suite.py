@@ -7,7 +7,8 @@ class Suite:
     name: str = ''
     operations: List[Operation] = []
 
-    def __init__(self, operations):
+    def __init__(self, operations, name=''):
+        self.name = name
         self.operations = []
         for operation in operations:
             self.operations.append(Operation(**operation))
