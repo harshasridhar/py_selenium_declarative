@@ -21,8 +21,13 @@ class Runner:
 
     def run(self, suite: Suite):
         for operation in suite.operations:
-            self.__run_operation__(operation)
-            self.logger.info("Operation done %s", operation)
+            try:
+                self.__run_operation__(operation)
+                self.logger.info("Operation done %s", operation)
+            except Exception as ex:
+                self.logger.error("Operation failed %s", operation)
+                self.driver.save_screenshot(f'failure_{operation.name}.png')
+                raise ex
 
     def __run_operation__(self, operation: Operation) -> None:
         if operation.action == 'get':

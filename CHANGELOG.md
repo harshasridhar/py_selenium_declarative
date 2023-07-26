@@ -1,5 +1,10 @@
 # Change log
 
+## [0.1.2] - 2023-07-26
+
+### Added
+- Functionality to log error and take a screenshot.
+
 ## [0.1.1] - 2023-07-26
 
 ### Added 
