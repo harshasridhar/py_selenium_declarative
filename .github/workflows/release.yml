@@ -8,8 +8,8 @@ on:
 
 
 permissions:
-  contents: read
-  releases: write
+  contents: write
+#   releases: write
 
 jobs:
   release:
