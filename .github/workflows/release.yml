@@ -31,4 +31,4 @@ jobs:
           tag_name: ${{ steps.changelog.outputs.version }}
           release_name: Release ${{ steps.changelog.outputs.version }}
           draft: false
-          prerelease: false
+          prerelease: true
