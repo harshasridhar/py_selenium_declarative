@@ -5,6 +5,7 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
+    paths: ["docs/*"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -28,6 +29,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Update version in installation.md file
+        run: sed -i "s/{{version}}/$(grep -m1 -oP '^## \[\K[^\]]+' CHANGELOG.md | cut -d']' -f1)/g" docs/installation.md
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Setup Python
