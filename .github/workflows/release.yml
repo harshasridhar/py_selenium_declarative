@@ -25,6 +25,12 @@ jobs:
         run: |
           poetry run coverage run -m pytest
           poetry run coverage xml
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: coverage.xml
+          retention-days: 5
       - name: Read changelog
         id: changelog
         run: |
