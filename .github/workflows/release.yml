@@ -19,7 +19,9 @@ jobs:
         uses: actions/checkout@v2
       - name: Run Test and Prepare coverage report
         run: |
-          pip install pytest pytest-cov
+          pip install poetry 
+          cd py_selenium_declarative
+          poetry install
           coverage run -m pytest
           coverage xml
       - name: Read changelog
