@@ -38,7 +38,7 @@ jobs:
           echo "VERSION=$VERSION"   
           echo "::set-output name=version::$VERSION"
       - name: Update version in __init__.py file
-        run: sed -i "s/{{version}}/$(grep -m1 -oP '^## \[\K[^\]]+' CHANGELOG.md | cut -d']' -f1)/g" py_selenium_declarative/__init__.py
+        run: sed -i "s/{{version}}/$(grep -m1 -oP '^## \[\K[^\]]+' CHANGELOG.md | cut -d']' -f1)/g" __init__.py
       - name: Create Release
         uses: actions/create-release@v1
         env:
