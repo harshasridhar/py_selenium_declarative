@@ -17,12 +17,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Run Test and Prepare coverage report
+      - name: Install dependencies
         run: |
           pip install poetry 
-          poetry shell
-          cd py_selenium_declarative
           poetry install
+      - name: Run Test 
+        run: |
           coverage run -m pytest
           coverage xml
       - name: Read changelog
