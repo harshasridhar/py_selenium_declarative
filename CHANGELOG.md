@@ -1,5 +1,11 @@
 # Change log
 
+## [0.1.4] - 2023-07-26
+
+### Modified
+- Made app run from commandline cmd - `psd`.
+- Updated docs.
+
 ## [0.1.3] - 2023-08-12
 
 ### Added

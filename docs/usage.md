@@ -3,6 +3,11 @@
 ```shell
 python -m py_selenium_declarative --help
 ```
+OR
+```shell
+psd --help
+```
+OUTPUT:<br/>
 ```text
 Usage: py_selenium_declarative [OPTIONS] COMMAND [ARGS]...
 
@@ -22,6 +27,11 @@ Run a test suite.
 ```shell
 python -m py_selenium_declarative run --help
 ```
+OR
+```shell
+psd run --help
+```
+OUTPUT:<br/>
 ```text
 Usage: py_selenium_declarative run [OPTIONS]
 
@@ -34,6 +44,11 @@ Options:
 ```shell
 python -m py_selenium_declarative run
 ```
+OR
+```shell
+psd run
+```
+OUTPUT:<br/>
 A prompt as follows is shown where the file path needs to be entered
 ```text
 Filename [suite.json]: 
@@ -42,4 +57,8 @@ Filename [suite.json]:
 ### Without prompt
 ```shell
 python -m py_selenium_declarative run -f suite.json
+```
+OR
+```shell
+psd run -f suite.json
 ```
