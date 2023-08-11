@@ -23,8 +23,8 @@ jobs:
           poetry install
       - name: Run Test 
         run: |
-          python -m coverage run -m pytest
-          python -m coverage xml
+          python3 -m coverage run -m pytest
+          python3 -m coverage xml
       - name: Read changelog
         id: changelog
         run: |
