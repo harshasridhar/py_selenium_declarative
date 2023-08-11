@@ -19,6 +19,12 @@
       "action": "screenshot"
     },
     {
+      "action": "text",
+      "xpath": "//*[@id='APjFqb']",
+      "value": "Hello World",
+      "verify": true
+    },
+    {
       "action": "sleep",
       "value": "10"
     }
