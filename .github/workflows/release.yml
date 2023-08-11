@@ -20,6 +20,7 @@ jobs:
       - name: Run Test and Prepare coverage report
         run: |
           pip install poetry 
+          poetry shell
           cd py_selenium_declarative
           poetry install
           coverage run -m pytest
