@@ -23,9 +23,9 @@ jobs:
           poetry install
       - name: Run Test 
         run: |
-          cd py_selenium_declarative
+          poetry run coverage run
+          poetry run coverage report
           poetry run coverage xml
-          cd ..
       - name: Read changelog
         id: changelog
         run: |
