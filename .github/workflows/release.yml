@@ -19,6 +19,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Run Test and Prepare coverage report
         run: |
+          pwd
           pip install poetry
           poetry install
           coverage run -m pytest
