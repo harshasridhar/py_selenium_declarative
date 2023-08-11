@@ -31,12 +31,9 @@ jobs:
           name: coverage-report
           path: coverage.xml
           retention-days: 5
-      - name: Read changelog
+      - name: List
         id: changelog
-        run: |
-          VERSION=$(head -n1 <(sed -n 's/^## \[\([^]]*\)\].*$/\1/p' CHANGELOG.md)) 
-          echo "VERSION=$VERSION"   
-          echo "::set-output name=version::$VERSION"
+        run: ls -a
       - name: Update version in __init__.py file
         run: sed -i "s/{{version}}/$(grep -m1 -oP '^## \[\K[^\]]+' CHANGELOG.md | cut -d']' -f1)/g" __init__.py
       - name: Create Release
